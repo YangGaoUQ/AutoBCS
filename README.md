@@ -1,9 +1,8 @@
 # AutoBCS
-================================
-#Codes for AutoBCS net
+# Codes for AutoBCS net
 ================================
 ________________________________
-##Whole Framework of AutoBCS
+## Whole Framework of AutoBCS
 ________________________________
 ![Whole Framework](https://github.com/YangGaoUQ/AutoBCS/blob/master/img/Fig1.png)
 ________________________________
