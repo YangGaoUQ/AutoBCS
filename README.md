@@ -1,6 +1,10 @@
 # AutoBCS
 # Codes for AutoBCS net
 *** 
+### requirements: 
+### Pytorch 1.1 or later
+
+to be upadted soon...
 ________________________________
 ## Whole Framework of AutoBCS
 ________________________________
