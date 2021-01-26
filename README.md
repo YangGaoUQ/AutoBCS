@@ -70,12 +70,13 @@ MATLAB 2017b or later
 ```
 
 ## The whole test pipeline (on your own data)
-1. Prepare your test data, and make your own directory for it, and rename them in a numerical order. (You can use Prepare_TestData.m provided in the folder './set5/' to process your data.)
-    for eaxmple, if you have 10 data, you could make a directory ./set10/ to place them and maybe rename them with the following format: "(File_no).mat", where File_no is an integer from 1 to 10.  
-
+1. Prepare your test data, and make your own directory for it, and rename them in a numerical order. (You can use Prepare_TestData.m provided in the folder './set5/' to process your data.) 
+```matlab 
+    matlab -r "Prepare_TestData.m"
+```
 
 2. Modify the  test code. 
-    1. Open ./Inference/Evaluate_Set5.py using your own IDE
+    1. Open ./Inference/Evaluate_set5.py using your own IDE
     2. go to line 37, set File_No = numer_of_your_own_images
     3. go to line 38, change 'set5' to your own directory
     4. save it as your own test script file. 
@@ -85,10 +86,13 @@ MATLAB 2017b or later
 ```python
     python your_own_test_script.py  
 ```
-## Train new AutoBCS
+## Train new AutoBCS Net
 1. prepare your own trianing datasets (We used BSD500 database https://github.com/BIDS/BSDS500 )
 
 2. Preprocessing data sets using the codes in the directory './Preprocessing_for_training' with Matlab
+```matlab 
+    matlab -r "GenerateData_model_64_96_Adam.m"
+```
 
 3. Enter the tranining folder ('./Training/'), and run the code: 
 ```python 
