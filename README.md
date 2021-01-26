@@ -1,6 +1,7 @@
 # AutoBCS: Block-based Image Compressive Sensing with Data-driven Acquisition and Non-iterative Reconstruction
 This reposiotry is for AutoBCS framwork introduced in the following paper: https://arxiv.org/abs/2009.14706.  
-This code was built and tested on Centos 7.0 with Nvdia Tesla V100 and Windows 10 environment (python 3.7, pytorch > 1.1)  with GTX 1060. 
+
+This code was built and tested on Centos 7.8 with Nvdia Tesla V100 and Windows 10 environment (python 3.7, pytorch > 1.1)  with GTX 1060. 
 
 # Overview
 
@@ -60,7 +61,7 @@ MATLAB 2017b or later
 1. Clone this repository
 
 ```
-    git clone https://github.com/YangGaoUQ/AutoBCS.git\
+    git clone https://github.com/YangGaoUQ/AutoBCS.git
 ```
 
 2. Run the following scripts (in Folder './Inference/') to test the pre-trained models.
