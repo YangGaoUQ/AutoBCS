@@ -16,7 +16,7 @@ class LSM_IniReconNet(nn.Module):
         self.sampling = nn.Conv2d(1, SamplingPoints , BlockSize, stride = 32, padding = 0,bias=False)
         nn.init.normal_(self.sampling.weight, mean=0.0, std=0.028)  
 
-        ## linear intial recon
+        ## linear intial recon (by basic linear operator)
         self.init_bl = nn.Conv2d(SamplingPoints, BlockSize ** 2, 1, bias=False)
 
     def forward(self, x):
