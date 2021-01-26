@@ -1,7 +1,8 @@
 # AutoBCS: Block-based Image Compressive Sensing with Data-driven Acquisition and Non-iterative Reconstruction
-This reposiotry is for AutoBCS framwork introduced in the following paper: https://arxiv.org/abs/2009.14706.  This code was built and tested on Centos 7.0 with Nvdia Tesla V100 and Windows 10 environment (python 3.7, pytorch > 1.1)  with GTX 1060. 
+This reposiotry is for AutoBCS framwork introduced in the following paper: https://arxiv.org/abs/2009.14706.  
+This code was built and tested on Centos 7.0 with Nvdia Tesla V100 and Windows 10 environment (python 3.7, pytorch > 1.1)  with GTX 1060. 
 
-# Introduction
+# Overview
 
 Abstract—Block compressive sensing is a well-known signal
 acquisition and reconstruction paradigm with widespread application
@@ -35,16 +36,44 @@ superior performance in terms of image quality metrics (SSIM
 and PSNR) and visual perception, but also automatically benefit
 reconstruction speed.
 *** 
-### requirements: 
-### Pytorch 1.1 or later
-
-to be upadted soon...
 ________________________________
-## Whole Framework of AutoBCS
+### (1) Whole Framework of AutoBCS
 ________________________________
 ![Whole Framework](https://github.com/YangGaoUQ/AutoBCS/blob/master/img/Fig1.png)
 Fig. 1: Schematic representation of our proposed AutoBCS architecture. AutoBCS replaces the traditional BCS approach with a unified image acquisition and reconstruction framework.
 ________________________________
-## Training Data Flow
+### (2) Training Data Flow
 ________________________________
 ![Network Flow](https://github.com/YangGaoUQ/AutoBCS/blob/master/img/Fig2.png)
+Fig. 2: The deep neural network architecture of AutoBCS contains two components: a data-driven image acquisition module
+and a noniterative data reconstruction module (composed of an initial reconstruction subnetwork and an octave reconstruction
+subnetwork).
+
+## Requirements
+Python 3.7 or later
+NVDIA GPU (CUDA 10.0)
+Pytorch 1.10 or later
+MATLAB 2017b or later
+
+# Manual
+
+## Quick Test (inference on Set 5)
+1. Clone this repository
+    git clone https://github.com/YangGaoUQ/AutoBCS.git
+
+2. Run the following scripts to test the pre-trained models. 
+    python Evaluate_Set5.py
+
+## The whole test pipeline (for your data)
+1. Prepare your test data, and make your own directory for it, and rename them in a numerical order:
+    for eaxmple, if you have 10 data, you could make a directory ./set10/ to place them and maybe rename them with the following format: "(File_no).mat", where File_no is an integer from 1 to 10.   
+2. Modify the  test code. 
+    1. Open Evaluate_Set5.py using your own IDE
+    2. go to line 31, set File_No = numer_of_your_own_images
+    3. go to line 33, change "set5" to your own directory
+    4. save it as your own test script file. 
+
+3. python your_own_test_script.py  
+
+## Train new AutoBCS
+
