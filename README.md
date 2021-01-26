@@ -35,15 +35,14 @@ these approaches, our AutoBCS framework can not only provide
 superior performance in terms of image quality metrics (SSIM
 and PSNR) and visual perception, but also automatically benefit
 reconstruction speed.
-*** 
-________________________________
+
 ### (1) Whole Framework of AutoBCS
-________________________________
+
 ![Whole Framework](https://github.com/YangGaoUQ/AutoBCS/blob/master/img/Fig1.png)
-Fig. 1: Schematic representation of our proposed AutoBCS architecture. AutoBCS replaces the traditional BCS approach with a unified image acquisition and reconstruction framework.
-________________________________
+Fig. 1: Schematic representation of our proposed AutoBCS architecture. AutoBCS replaces the traditional BCS approach with a unified image acquisition and reconstruction framework.  
+
 ### (2) Training Data Flow
-________________________________
+
 ![Network Flow](https://github.com/YangGaoUQ/AutoBCS/blob/master/img/Fig2.png)
 Fig. 2: The deep neural network architecture of AutoBCS contains two components: a data-driven image acquisition module
 and a noniterative data reconstruction module (composed of an initial reconstruction subnetwork and an octave reconstruction
@@ -85,4 +84,14 @@ MATLAB 2017b or later
     python your_own_test_script.py  
 ```
 ## Train new AutoBCS
+1. prepare your own trianing datasets (We used BSD500 database https://github.com/BIDS/BSDS500 )
+
+2. Preprocessing data sets using the codes in the directory './Preprocessing' with Matlab
+
+3. Enter the tranining Folder, and run the code: 
+```python 
+    python TrainAutoBCS.py 
+```
+
+
 
