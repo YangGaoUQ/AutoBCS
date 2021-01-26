@@ -60,17 +60,17 @@ MATLAB 2017b or later
 ## Quick Test (inference on Set 5)
 1. Clone this repository
 
-'''
+```
     git clone https://github.com/YangGaoUQ/AutoBCS.git\
-'''
+```
 
 2. Run the following scripts to test the pre-trained models.
 
-'''
+```python
     python Evaluate_Set5.py
-'''
+```
 
-## The whole test pipeline (for your data)
+## The whole test pipeline (on your own data)
 1. Prepare your test data, and make your own directory for it, and rename them in a numerical order:
     for eaxmple, if you have 10 data, you could make a directory ./set10/ to place them and maybe rename them with the following format: "(File_no).mat", where File_no is an integer from 1 to 10.   
 2. Modify the  test code. 
@@ -79,7 +79,10 @@ MATLAB 2017b or later
     3. go to line 33, change "set5" to your own directory
     4. save it as your own test script file. 
 
-3. python your_own_test_script.py  
+3. Run your own code
 
+```python
+    python your_own_test_script.py  
+```
 ## Train new AutoBCS
 
