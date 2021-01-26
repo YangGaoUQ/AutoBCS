@@ -63,19 +63,21 @@ MATLAB 2017b or later
     git clone https://github.com/YangGaoUQ/AutoBCS.git\
 ```
 
-2. Run the following scripts to test the pre-trained models.
+2. Run the following scripts (in Folder './Inference/') to test the pre-trained models.
 
 ```python
-    python Evaluate_Set5.py
+    python Evaluate_set5.py
 ```
 
 ## The whole test pipeline (on your own data)
-1. Prepare your test data, and make your own directory for it, and rename them in a numerical order:
-    for eaxmple, if you have 10 data, you could make a directory ./set10/ to place them and maybe rename them with the following format: "(File_no).mat", where File_no is an integer from 1 to 10.   
+1. Prepare your test data, and make your own directory for it, and rename them in a numerical order. (You can use Prepare_TestData.m provided in the folder './set5/' to process your data.)
+    for eaxmple, if you have 10 data, you could make a directory ./set10/ to place them and maybe rename them with the following format: "(File_no).mat", where File_no is an integer from 1 to 10.  
+
+
 2. Modify the  test code. 
-    1. Open Evaluate_Set5.py using your own IDE
-    2. go to line 31, set File_No = numer_of_your_own_images
-    3. go to line 33, change "set5" to your own directory
+    1. Open ./Inference/Evaluate_Set5.py using your own IDE
+    2. go to line 37, set File_No = numer_of_your_own_images
+    3. go to line 38, change 'set5' to your own directory
     4. save it as your own test script file. 
 
 3. Run your own code
@@ -86,9 +88,9 @@ MATLAB 2017b or later
 ## Train new AutoBCS
 1. prepare your own trianing datasets (We used BSD500 database https://github.com/BIDS/BSDS500 )
 
-2. Preprocessing data sets using the codes in the directory './Preprocessing' with Matlab
+2. Preprocessing data sets using the codes in the directory './Preprocessing_for_training' with Matlab
 
-3. Enter the tranining Folder, and run the code: 
+3. Enter the tranining folder ('./Training/'), and run the code: 
 ```python 
     python TrainAutoBCS.py 
 ```
