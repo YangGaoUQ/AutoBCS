@@ -50,19 +50,25 @@ and a noniterative data reconstruction module (composed of an initial reconstruc
 subnetwork).
 
 ## Requirements
-Python 3.7 or later
-NVDIA GPU (CUDA 10.0)
-Pytorch 1.10 or later
-MATLAB 2017b or later
+Python 3.7 or later  
+NVDIA GPU (CUDA 10.0)  
+Pytorch 1.10 or later  
+MATLAB 2017b or later  
 
 # Manual
 
 ## Quick Test (inference on Set 5)
 1. Clone this repository
-    git clone https://github.com/YangGaoUQ/AutoBCS.git
 
-2. Run the following scripts to test the pre-trained models. 
+'''
+    git clone https://github.com/YangGaoUQ/AutoBCS.git\
+'''
+
+2. Run the following scripts to test the pre-trained models.
+
+'''
     python Evaluate_Set5.py
+'''
 
 ## The whole test pipeline (for your data)
 1. Prepare your test data, and make your own directory for it, and rename them in a numerical order:
