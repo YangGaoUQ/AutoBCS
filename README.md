@@ -1,5 +1,5 @@
 # AutoBCS: Block-based Image Compressive Sensing with Data-driven Acquisition and Non-iterative Reconstruction
-This reposiotry is for AutoBCS framwork introduced in the following paper: https://arxiv.org/abs/2009.14706.  
+This reposiotry is for AutoBCS framwork introduced in the following paper: https://arxiv.org/abs/2009.14706, which has been accepted by IEEE transactions on cybernetics (https://doi.org/10.1109/TCYB.2021.3127657).  
 
 This code was built and tested on Centos 7.8 with Nvdia Tesla V100 and Windows 10 environment (python 3.7, pytorch > 1.1)  with GTX 1060. 
 
